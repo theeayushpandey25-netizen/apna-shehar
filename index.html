@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Apna Shehar</title>
 
 <style>
+
 body{
 font-family: Arial;
-text-align:center;
 background:#f2f2f2;
+text-align:center;
+}
+
+h1{
+color:#333;
 }
 
 input{
 padding:10px;
 margin:10px;
+width:200px;
 }
 
 button{
@@ -20,11 +27,18 @@ padding:10px 20px;
 background:blue;
 color:white;
 border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:darkblue;
 }
 
 #result{
 margin-top:20px;
+font-size:18px;
 }
+
 </style>
 
 </head>
@@ -32,18 +46,26 @@ margin-top:20px;
 <body>
 
 <h1>Apna Shehar</h1>
+
 <p>Apne city ke log kaha kaha hain</p>
 
-<h3>Apna naam aur city add karo</h3>
+<h2>Apna Data Add karo</h2>
 
 <input type="text" id="name" placeholder="Apna naam">
+
+<br>
+
 <input type="text" id="city" placeholder="Apna city">
+
+<br>
 
 <button onclick="addUser()">Add</button>
 
-<h3>City search karo</h3>
+<h2>City Search karo</h2>
 
 <input type="text" id="searchCity" placeholder="City name">
+
+<br>
 
 <button onclick="searchCity()">Search</button>
 
@@ -87,4 +109,5 @@ document.getElementById("result").innerHTML=result;
 </script>
 
 </body>
+
 </html>
