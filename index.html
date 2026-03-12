@@ -1,13 +1,90 @@
 <!DOCTYPE html>
-<!-- saved from url=(0063)file:///C:/Users/ACER/OneDrive/Desktop/apna%20shehar/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>apna shehar</title>
+<html>
+<head>
+<title>Apna Shehar</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+input{
+padding:10px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:blue;
+color:white;
+border:none;
+}
+
+#result{
+margin-top:20px;
+}
+</style>
+
 </head>
 
 <body>
-    <h1>apna shehar</h1>
-    <h2>apne city ke log kaha kaha hain</h2>
-    <p>yaha par app apni city search karke apne shehar ke log dhudh sakte ho.</p>
 
+<h1>Apna Shehar</h1>
+<p>Apne city ke log kaha kaha hain</p>
 
-</body></html>
+<h3>Apna naam aur city add karo</h3>
+
+<input type="text" id="name" placeholder="Apna naam">
+<input type="text" id="city" placeholder="Apna city">
+
+<button onclick="addUser()">Add</button>
+
+<h3>City search karo</h3>
+
+<input type="text" id="searchCity" placeholder="City name">
+
+<button onclick="searchCity()">Search</button>
+
+<div id="result"></div>
+
+<script>
+
+let users=[];
+
+function addUser(){
+
+let name=document.getElementById("name").value;
+let city=document.getElementById("city").value;
+
+users.push({name:name,city:city});
+
+alert("Data add ho gaya");
+
+}
+
+function searchCity(){
+
+let search=document.getElementById("searchCity").value;
+
+let result="";
+
+for(let i=0;i<users.length;i++){
+
+if(users[i].city==search){
+
+result+=users[i].name+"<br>";
+
+}
+
+}
+
+document.getElementById("result").innerHTML=result;
+
+}
+
+</script>
+
+</body>
+</html>
